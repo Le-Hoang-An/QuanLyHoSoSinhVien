@@ -6,6 +6,7 @@ import view.*;
 import controller.*;
 
 public class AdminDashboardController {
+
     private AdminDashboard dashboard;
 
     public AdminDashboardController(AdminDashboard dashboard) {
@@ -38,7 +39,7 @@ public class AdminDashboardController {
             @Override
             public void actionPerformed(ActionEvent e) {
                 LopHocView view = new LopHocView();
-                new LopHocController(view, dashboard);
+                new LopHocController(view, dashboard); // phải truyền dashboard vào!
                 view.setVisible(true);
                 dashboard.setVisible(false);
             }

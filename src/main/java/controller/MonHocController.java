@@ -1,5 +1,6 @@
 package controller;
 
+import javax.swing.JOptionPane;
 import view.MonHocView;
 import view.AdminDashboard;
 
@@ -12,8 +13,13 @@ public class MonHocController {
         this.dashboard = dashboard;
 
         this.view.addBackListener(e -> {
+            System.out.println("Nút Quay lại được nhấn");
             view.setVisible(false);
-            dashboard.setVisible(true);
+            if (dashboard != null) {
+                dashboard.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(view, "Lỗi: Không thể quay lại Dashboard!");
+            }
         });
     }
 }

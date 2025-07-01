@@ -5,9 +5,10 @@ import java.awt.*;
 import java.awt.event.ActionListener;
 
 public class AdminDashboard extends JFrame {
+    private static AdminDashboard instance;
     private JButton btnSinhVien, btnGiangVien, btnLopHoc, btnMonHoc, btnKetQua, btnTaiKhoan;
 
-    public AdminDashboard() {
+    private AdminDashboard() {
         setTitle("Admin Dashboard");
         setSize(600, 400);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -27,6 +28,13 @@ public class AdminDashboard extends JFrame {
         add(btnMonHoc);
         add(btnKetQua);
         add(btnTaiKhoan);
+    }
+
+    public static AdminDashboard getInstance() {
+        if (instance == null) {
+            instance = new AdminDashboard();
+        }
+        return instance;
     }
 
     public void addSinhVienListener(ActionListener listener) { btnSinhVien.addActionListener(listener); }

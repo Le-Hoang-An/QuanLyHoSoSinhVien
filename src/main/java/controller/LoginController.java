@@ -3,13 +3,8 @@ package controller;
 import model.TaiKhoan;
 import model.TaiKhoanDAO;
 import view.AdminDashboard;
-import view.GiangVienView;
-import view.KetQuaView;
 import view.LoginView;
 import view.LopHocView;
-import view.MonHocView;
-import view.SinhVienView;  // hoặc AdminDashboardView tùy quyền
-import view.TaiKhoanView;
 
 public class LoginController {
 
@@ -33,18 +28,11 @@ public class LoginController {
             loginView.setVisible(false);
 
             if (tk.getVaiTro().equalsIgnoreCase("admin")) {
-                AdminDashboard dash = new AdminDashboard();
+                AdminDashboard dash = AdminDashboard.getInstance();
+                new AdminDashboardController(dash);
                 dash.setVisible(true);
-
-                // Gắn listener chuyển view
-                dash.addSinhVienListener(e -> new SinhVienView().setVisible(true));
-                dash.addGiangVienListener(e -> new GiangVienView().setVisible(true));
-                dash.addLopHocListener(e -> new LopHocView().setVisible(true));
-                dash.addMonHocListener(e -> new MonHocView().setVisible(true));
-                dash.addKetQuaListener(e -> new KetQuaView().setVisible(true));
-                dash.addTaiKhoanListener(e -> new TaiKhoanView().setVisible(true));
             } else {
-                new LopHocView().setVisible(true); // ví dụ quyền user chỉ xem lớp học
+                new LopHocView().setVisible(true);
             }
         }
     }

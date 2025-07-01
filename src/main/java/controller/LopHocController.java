@@ -11,8 +11,11 @@ public class LopHocController {
         this.view = view;
         this.dashboard = dashboard;
 
-        this.view.addBackListener(e -> {
-            view.setVisible(false);
+        // Các xử lý khác...
+
+        // Thêm xử lý nút Quay lại
+        view.addBackListener(e -> {
+            view.dispose();
             dashboard.setVisible(true);
         });
     }
