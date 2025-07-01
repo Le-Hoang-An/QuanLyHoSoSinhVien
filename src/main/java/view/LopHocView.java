@@ -15,7 +15,7 @@ public class LopHocView extends JFrame {
     public LopHocView() {
         setTitle("Quản lý Lớp Học");
         setSize(700, 450);
-        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
         setLocationRelativeTo(null);
         setLayout(new BorderLayout(10, 10));
 

@@ -16,7 +16,7 @@ public class GiangVienView extends JFrame {
     public GiangVienView() {
         setTitle("Quản lý Giảng Viên");
         setSize(850, 550);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
         setLocationRelativeTo(null);
         setLayout(new BorderLayout(10, 10));
 

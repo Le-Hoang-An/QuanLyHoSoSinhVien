@@ -15,7 +15,7 @@ public class TaiKhoanView extends JFrame {
     public TaiKhoanView() {
         setTitle("Quản lý Tài Khoản");
         setSize(700, 450);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
         setLocationRelativeTo(null);
         setLayout(new BorderLayout(10, 10));
 

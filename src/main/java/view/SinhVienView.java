@@ -15,7 +15,7 @@ public class SinhVienView extends JFrame {
     public SinhVienView() {
         setTitle("Quản lý Sinh viên");
         setSize(800, 500);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
         setLocationRelativeTo(null);
         setLayout(new BorderLayout(10, 10));
 
