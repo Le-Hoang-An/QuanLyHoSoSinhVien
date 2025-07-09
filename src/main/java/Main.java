@@ -3,8 +3,10 @@ import controller.LoginController;
 
 public class Main {
     public static void main(String[] args) {
-        LoginView login = new LoginView();
-        login.setVisible(true);
-        new LoginController(login);
+        javax.swing.SwingUtilities.invokeLater(() -> {
+            LoginView loginView = new LoginView();
+            new LoginController(loginView);
+            loginView.setVisible(true);
+        });
     }
 }

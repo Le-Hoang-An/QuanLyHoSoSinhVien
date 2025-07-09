@@ -1,39 +1,34 @@
 package controller;
 
-import model.TaiKhoan;
 import model.TaiKhoanDAO;
-import view.AdminDashboard;
 import view.LoginView;
-import view.LopHocView;
+import view.DashboardView;
+
+import javax.swing.*;
 
 public class LoginController {
-
-    private LoginView loginView;
+    private LoginView view;
     private TaiKhoanDAO dao;
 
-    public LoginController(LoginView loginView) {
-        this.loginView = loginView;
+    public LoginController(LoginView view) {
+        this.view = view;
         this.dao = new TaiKhoanDAO();
-        this.loginView.addLoginListener(e -> dangNhap());
-    }
 
-    private void dangNhap() {
-        String user = loginView.getUsername();
-        String pass = loginView.getPassword();
-        TaiKhoan tk = dao.checkLogin(user, pass);
-        if (tk == null) {
-            loginView.showMessage("Sai tên đăng nhập hoặc mật khẩu!");
-        } else {
-            loginView.showMessage("Đăng nhập thành công với quyền: " + tk.getVaiTro());
-            loginView.setVisible(false);
-
-            if (tk.getVaiTro().equalsIgnoreCase("admin")) {
-                AdminDashboard dash = AdminDashboard.getInstance();
-                new AdminDashboardController(dash);
+        view.addLoginListener(e -> {
+            String user = view.getUsername();
+            String pass = view.getPassword();
+            if (dao.checkLogin(user, pass)) {
+                view.showMessage("Đăng nhập thành công!");
+                view.dispose();
+                DashboardView dash = new DashboardView();
+                new DashboardController(dash); // Gắn controller cho Dashboard
                 dash.setVisible(true);
             } else {
-                new LopHocView().setVisible(true);
+                view.showMessage("Sai tài khoản hoặc mật khẩu!");
+                view.clearFields();
             }
-        }
+        });
+
+        view.addThoatListener(e -> System.exit(0));
     }
 }

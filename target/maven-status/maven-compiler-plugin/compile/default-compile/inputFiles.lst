@@ -1,11 +1,7 @@
 D:\Java NetBeans\QuanLyHoSoSinhVien\src\main\java\connect\DBConnect.java
-D:\Java NetBeans\QuanLyHoSoSinhVien\src\main\java\controller\AdminDashboardController.java
-D:\Java NetBeans\QuanLyHoSoSinhVien\src\main\java\controller\GiangVienController.java
+D:\Java NetBeans\QuanLyHoSoSinhVien\src\main\java\controller\DashboardController.java
 D:\Java NetBeans\QuanLyHoSoSinhVien\src\main\java\controller\KetQuaController.java
 D:\Java NetBeans\QuanLyHoSoSinhVien\src\main\java\controller\LoginController.java
-D:\Java NetBeans\QuanLyHoSoSinhVien\src\main\java\controller\LopHocController.java
-D:\Java NetBeans\QuanLyHoSoSinhVien\src\main\java\controller\MonHocController.java
-D:\Java NetBeans\QuanLyHoSoSinhVien\src\main\java\controller\SinhVienController.java
 D:\Java NetBeans\QuanLyHoSoSinhVien\src\main\java\controller\TaiKhoanController.java
 D:\Java NetBeans\QuanLyHoSoSinhVien\src\main\java\Main.java
 D:\Java NetBeans\QuanLyHoSoSinhVien\src\main\java\model\GiangVien.java
@@ -20,11 +16,7 @@ D:\Java NetBeans\QuanLyHoSoSinhVien\src\main\java\model\SinhVien.java
 D:\Java NetBeans\QuanLyHoSoSinhVien\src\main\java\model\SinhVienDAO.java
 D:\Java NetBeans\QuanLyHoSoSinhVien\src\main\java\model\TaiKhoan.java
 D:\Java NetBeans\QuanLyHoSoSinhVien\src\main\java\model\TaiKhoanDAO.java
-D:\Java NetBeans\QuanLyHoSoSinhVien\src\main\java\view\AdminDashboard.java
-D:\Java NetBeans\QuanLyHoSoSinhVien\src\main\java\view\GiangVienView.java
+D:\Java NetBeans\QuanLyHoSoSinhVien\src\main\java\view\DashboardView.java
 D:\Java NetBeans\QuanLyHoSoSinhVien\src\main\java\view\KetQuaView.java
 D:\Java NetBeans\QuanLyHoSoSinhVien\src\main\java\view\LoginView.java
-D:\Java NetBeans\QuanLyHoSoSinhVien\src\main\java\view\LopHocView.java
-D:\Java NetBeans\QuanLyHoSoSinhVien\src\main\java\view\MonHocView.java
-D:\Java NetBeans\QuanLyHoSoSinhVien\src\main\java\view\SinhVienView.java
 D:\Java NetBeans\QuanLyHoSoSinhVien\src\main\java\view\TaiKhoanView.java
